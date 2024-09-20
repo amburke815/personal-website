@@ -18,7 +18,7 @@ app.use(express.json())
 // define routes
 
 app.get('/examples/random', (req, res) => {
-    res.json(Math.ceil(Math.random() * 100))
+    res.json(Math.ceil(Math.random() * 100)) // send back a random no. b/w 1-100
 })
 
 // start server
