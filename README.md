@@ -3,6 +3,7 @@ My personal website, as well as a framework for building extensible websites for
  
 # To run as a developer
 <ol>
+    <li><code>npm install</code> to fetch dependencies</li>
     <li><code>node ./backend/server.js</code></li>
     <li><code>cd ./frontend</code></li>
     <li><code>npm run serve</code></li>
