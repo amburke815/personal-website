@@ -3,7 +3,7 @@ My personal website, as well as a framework for building extensible websites for
  
 # To run as a developer
 <ol>
-    <li><code>echo "MONGO_PW=<u>???</u>"</code> where <u>???</u> is your MongoDB connection password from the MongoDB Atlas website</li>
+    <li><code>echo "MONGO_PW=<i>???</i>" &gt; .env</code> where <i>???</i> is your MongoDB connection password from the MongoDB Atlas website</li>
     <li><code>npm install</code> to fetch dependencies</li>
     <li><code>node ./backend/server.js</code></li>
     <li><code>cd ./frontend</code></li>
