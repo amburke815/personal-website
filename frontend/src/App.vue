@@ -1,4 +1,5 @@
 <template>
+  <LoginBox title="please login."/>
   <img width="300" height="400" alt="cat" src="./assets/thumbs.jpeg">
   <HelloWorld msg="Look at this Lazy Fuck."/>
   <div :style="{ backgroundColor: 'lightgray', padding: '10px' }">
@@ -8,6 +9,7 @@
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import LoginBox from './components/LoginBox.vue'
 import axios from 'axios'
 
 
@@ -15,7 +17,8 @@ import axios from 'axios'
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HelloWorld,
+    LoginBox
   },
   data() {
     return {
