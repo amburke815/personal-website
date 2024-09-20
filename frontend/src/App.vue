@@ -1,0 +1,47 @@
+<template>
+  <img alt="Vue logo" src="./assets/logo.png">
+  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div :style="{ backgroundColor: 'lightgray', padding: '10px' }">
+    <button :style="{ color: 'blue', fontSize: '20px' }" @click="fetchRandom">click to generate a random number 1-100: {{ randomNumber }}</button>
+  </div>
+</template>
+
+<script>
+import HelloWorld from './components/HelloWorld.vue'
+import axios from 'axios'
+
+
+
+export default {
+  name: 'App',
+  components: {
+    HelloWorld
+  },
+  data() {
+    return {
+      randomNumber: null
+    }
+  },
+  methods: {
+    async fetchRandom() {
+      try {
+        const res = await axios.get('http://localhost:8000/examples/random')
+        this.randomNumber = res.data
+      } catch (error) {
+        console.error('couldnt get random no.')
+      }
+    }
+  }
+}
+</script>
+
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+</style>

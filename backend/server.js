@@ -16,8 +16,12 @@ app.use(express.json())
 //   .catch((err) => console.log(err));
 
 // define routes
-app.use('/api/items', require('./routes/items'))
+
+app.get('/examples/random', (req, res) => {
+    res.json(Math.ceil(Math.random() * 100))
+})
 
 // start server
-const port = process.env.PORT || 5000
+const port = process.env.PORT || 8000
 app.listen(port, () => console.log(`Server running on port ${port}...`))
+
