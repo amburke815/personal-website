@@ -3,7 +3,7 @@ My personal website, as well as a framework for building extensible websites for
  
 # To run as a developer
 <ol>
-    <li><code>echo "MOGNODB_USER=<i>U</i> \nMONGODB_PW=<i>P</i>" &gt; .env</code> where <i>U</i> is your MongoDB connection username and <i>P</i> is your MongoDB connection password </li>
+    <li><code>echo "MONGODB_USER=<i>U</i> \nMONGODB_PW=<i>P</i>" &gt; .env</code> where <i>U</i> is your MongoDB connection username and <i>P</i> is your MongoDB connection password </li>
     <li><code>npm install</code> to fetch dependencies</li>
     <li><code>node ./backend/server.js</code></li>
     <li><code>cd ./frontend</code></li>
